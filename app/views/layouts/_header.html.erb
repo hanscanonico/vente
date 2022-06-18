@@ -1,0 +1,13 @@
+<nav>
+    <a href="/">Home</a>
+    <% if user_signed_in? %>
+        <%= link_to "Cart(#{current_user.cart.nb_products})", cart_index_path %>
+        <%= link_to "My Orders", my_orders_path %>
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% end %>
+</nav>
+<% flash.each do |type, msg| %>
+  <div class="<%= type %>">
+    <%= msg %>
+  </div>
+<% end %>

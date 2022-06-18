@@ -1,0 +1,12 @@
+<h1>My Orders</h1>
+
+<div class="wrapper">
+  <% @orders.each do |order| %>
+    <div class="container">
+        <div>
+          <%= "#{order.number} (#{order.price}€)"  %>
+        </div>
+    </div>
+  <% end %>
+
+</div>

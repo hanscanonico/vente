@@ -1,0 +1,20 @@
+<h1>Cart</h1>
+
+<% @cart.cart_items.each do |cart_item| %>
+    <div class="container">
+        <div>
+            <%= link_to "#{cart_item.qty} #{cart_item.product.title}", cart_item.product %>
+        </div>
+        <div>
+          <%= button_to "Remove from cart", remove_product_from_cart_path(cart_item.product) %>
+        </div>
+    </div>
+<% end %>
+<div>
+    <p><%= "Total Price : #{@cart.total_price} "%></p>
+</div>
+<% unless @cart.cart_items.empty? %>
+    <div>
+        <%= link_to "Order Products", new_order_path, class: "button" %>
+    </div>
+<% end %>

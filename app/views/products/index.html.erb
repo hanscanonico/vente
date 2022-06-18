@@ -1,0 +1,23 @@
+<h1>Products</h1>
+
+<div class="wrapper">
+  <% @products.each do |product| %>
+    <div class="container">
+
+        <div>
+          <%= link_to product.title, product %>
+        </div>
+        <div>
+        </div>
+        <div>
+          <%= button_to "Add to cart", add_product_to_cart_path(product) %>
+        </div>
+  
+    </div>
+  <% end %>
+  
+  <div>
+    <%= link_to "New Product", new_product_path, class: "button" %>
+  </div>
+
+</div>

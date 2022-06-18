@@ -1,0 +1,44 @@
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    border: none;
+    border-radius: 5px;
+    background: var(--accent);
+    font-size: 1rem;
+    color: black !important;
+    padding: 0.7rem 0.9rem;
+    margin: 0.5rem 0;
+
+    text-decoration: none;
+}
+
+a.button:hover {
+    filter: brightness(1.4);
+    cursor: pointer;
+}
+
+.wrapper {
+    display: grid;
+}
+
+.wrapper {
+    display: grid;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.buttons_show {
+    display: flex;
+    width: 230px;
+    align-items: center;
+}
+
+.item_button {
+    flex: 0 0 0;
+    margin-right: 5px;
+}
